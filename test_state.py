@@ -83,10 +83,12 @@ if __name__=="__main__":
 
   while not done:
 
-    if manualMode: # override with keyboard
-      action = manualAction
-    else:
-      action = policy.predict(obs)
+#    if manualMode: # override with keyboard
+#      action = manualAction
+#    else:
+#      action = policy.predict(obs)
+
+    action = policy.predict(obs)
 
     if otherManualMode:
       otherAction = otherManualAction
